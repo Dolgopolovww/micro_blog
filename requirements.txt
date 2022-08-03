@@ -18,3 +18,4 @@ python-jose
 passlib[bcrypt]
 python-multipart
 bcrypt
+psycopg2
