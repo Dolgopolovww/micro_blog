@@ -2,6 +2,8 @@ from sqlalchemy import Column, String, Text, DateTime, Integer, ForeignKey
 from sqlalchemy.orm import relationship
 
 from src.app.db.db import Base
+from user.models import User
+
 
 class Post(Base):
     __tablename__ = 'microblog_posts'
@@ -12,4 +14,4 @@ class Post(Base):
     date = Column(DateTime)
     user = Column(Integer,  ForeignKey('users.id'))
 
-    user_id = relationship('User')
+    user_id = relationship(User)
